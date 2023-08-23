@@ -167,15 +167,13 @@ app.delete('/api/persons/:id', (request, response, next) => {
 app.put('/api/persons/:id', (request, response, next) => {
   const updatedPerson = request.body
 
-  const phone = {
-    name: updatedPerson.name,
-    number: updatedPerson.number,
-  }
-
-  Phone.findByIdAndUpdate(request.params.id, phone, { new: true })
+  Phone.findByIdAndUpdate(request.params.id,
+    { name: updatedPerson.name, number: updatedPerson.number},
+    { new: true, runValidators: true, upsert: true })
     .then(updatedPhone => {
       response.json(updatedPhone)
-    })
+    }
+    )
     .catch(error => next(error))
 })
 

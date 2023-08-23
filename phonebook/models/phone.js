@@ -28,7 +28,7 @@ const phoneScenma = new mongoose.Schema({
     
     validate: {
       validator: function(v) {
-        return /^\d{2,3}(-\d+){1,}$}/.test(v); // The format of phone number is only xx-xxxxxxx or xxx-xxxxx
+        return /^\d{2,3}(-\d+)?$/.test(v); // The format of phone number is only xx-xxxxxxx or xxx-xxxxx
       },
       message: props => `${props.value} is not a valid phone number!`
     },

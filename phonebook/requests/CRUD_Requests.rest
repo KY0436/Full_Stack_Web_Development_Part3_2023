@@ -1,0 +1,38 @@
+GET http://localhost:3001/
+###
+
+GET  http://localhost:3001/api/persons/64e2947ee721b175671bfeca
+###
+###
+
+
+DELETE  http://localhost:3001/api/persons/64e2947ee721b175671bfeca
+###
+
+
+POST  http://localhost:3001/api/persons
+content-type: application/json
+
+{
+    "name": "Yan Jiamin1", 
+    "number": "183-7022-2345"
+}
+###
+
+PUT  http://localhost:3001/api/persons/64e6633df4da971403fd5fc5
+content-type: application/json
+
+{
+    "name": "Yan Jiamin", 
+    "number": "182-61234123"
+}
+###
+
+PUT  http://localhost:3001/api/persons/64e6633df4da971403fd5fc5
+content-type: application/json
+
+{
+    "name": "Yan Jiamin", 
+    "number": "182-6123-4231"
+}
+###
