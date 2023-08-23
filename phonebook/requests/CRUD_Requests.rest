@@ -14,7 +14,7 @@ POST  http://localhost:3001/api/persons
 content-type: application/json
 
 {
-    "name": "Yan Jiamin1", 
+    "name": "Yan Jiamin", 
     "number": "183-7022-2345"
 }
 ###
